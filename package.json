@@ -4,5 +4,8 @@
   "description": "nano emitter with advanced options",
   "main": "index.js",
   "author": "alex pozdnyakof",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.3.6"
+  }
 }
