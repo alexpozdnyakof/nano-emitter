@@ -4,9 +4,18 @@ function nanoEmitter() {
   return Object.freeze({
     on: (name, callback) =>  {
       handlers.set(name, callback)
+      return this;
     },
     emit: (name, arg) => {
-      handlers.get(name)(arg)
+      const fn = handlers.get(name)
+      if(fn) {
+        fn(arg);
+      }
+      return this;
+    },
+    off: (name) => {
+      handlers.delete(name);
+      return this;
     }
   })
 }

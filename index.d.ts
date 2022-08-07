@@ -1,6 +1,7 @@
 export declare class Emitter {
   on(event: string, callback: Function): this
   emit(event: string, arg: any): this
+  off(event: string): this
 }
 
 declare function nanoEmitter(): Readonly<Emitter>
